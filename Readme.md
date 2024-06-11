@@ -1,6 +1,18 @@
 # Overview
-This is a project on the image captioning problem using a Transformers model deployed on the Hugging Face platform.
+Image captioning is the task of generating textual descriptions for images. It combines computer vision and natural language processing to teach machines to understand and describe visual content. Challenges include accurate content understanding, generating fluent language, aligning image features with language, and handling ambiguity. Despite these challenges, image captioning finds applications in accessibility, content retrieval, tagging, and enhancing user experiences.
 
+# Used technologies
+Modeling : 
+This project combines two cutting-edge technologies: EfficientNet and Transformers. 
+EfficientNet, a CNN architecture, specializes in extracting informative features from images efficiently. Utilizing EfficientNet helps minimize computational costs while maximizing feature extraction performance, contributing to the overall efficiency of the image captioning process.
+Transformers is a groundbreaking architecture introduced in the paper "Attention is All You Need," published in 2017 by Google's research team. Its emergence has sparked a powerful revolution in the field of artificial intelligence, particularly in natural language processing. I firmly believe that leveraging the Transformer architecture will significantly enhance the performance of our project. 
+
+Deploying:
+Hugging Face is a leading platform for natural language processing (NLP) that offers a comprehensive library of pre-trained models, datasets, and tools. It simplifies and accelerates NLP development with its user-friendly interface and extensive community support. Through Hugging Face, developers can easily access state-of-the-art NLP models, fine-tune them for specific tasks, and deploy them in production environments.
+
+
+
+You can access the project demo here [demo](https://huggingface.co/spaces/windy2612/ImageCaptioning).
 
 ## [1].Dataset
 Project uses flickr8k dataset. The project uses the Flickr8k dataset. This is a dataset consisting of over 8000 images, with each image having 5 sample captions.
