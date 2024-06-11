@@ -1,11 +1,11 @@
 # Project name
 Image Captiong with Transformers
 
-## Overview
+## [1]. Overview
 My project focuses on image captioning, aiming to automatically generate descriptive captions for images using deep learning techniques. By combining computer vision with natural language processing, we strive to bridge the gap between visual content and textual descriptions.
 
 You can access demo [here](https://huggingface.co/spaces/windy2612/ImageCaptioning)
-## Code structure
+## [2]. Code structure
 
 -`Save/Weight` : Directory containing weight of pretrained model.
 
@@ -23,17 +23,17 @@ You can access demo [here](https://huggingface.co/spaces/windy2612/ImageCaptioni
 
 -`training.py` : Script for training.
 
-## Dataset
+## [3].Dataset
 Project uses flickr8k dataset. The project uses the Flickr8k dataset. This is a dataset consisting of over 8000 images, with each image having 5 sample captions.
 
 You can access the dataset from [here](https://www.kaggle.com/datasets/adityajn105/flickr8k)
 
-## Model architecture
+## [4].Model architecture
 ![Model architecture](Save/Stuff/Model.jpg)
 
 The model architecture is inspired by the Transformers architecture, consisting of two parts: an encoder and a decoder.
 
-### Encoder
+### [4.1]Encoder
 ![Encoder architecture](Save/Stuff/Encoder.jpg)
 
 ![ImageEmbedding architecture](Save/Stuff/ImageEmbedding.jpg)
@@ -47,7 +47,7 @@ Each EncoderLayer integrates a MultiheadAttention network, Add&Norm, and FeedFor
 
 Finally, the output of the encoder is a tensor used as input for the decoder block.
 
-### Decoder
+### [4.2]Decoder
 ![Decoder archietecture](Save/Stuff/Decoder.jpg)
 
 ![CaptionEmbedding architecture](Save/Stuff/CaptionEmbedding.jpg)
@@ -68,7 +68,7 @@ Step 3: The output from step 2 is passed through the Feedforward block to transf
 
 Finally, we obtain a tensor that can be passed to the next DecoderLayer block or to the classifier block for classification.
 
-## Demo
+## [5].Demo
 
 After training, the model achieved an accuracy of 74.83% on the train dataset and 72.86% on the valid dataset. This is considered a fairly good result.
 
