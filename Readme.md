@@ -31,10 +31,18 @@ You can access the dataset from [here](https://www.kaggle.com/datasets/adityajn1
 ## [4].Model architecture
 ![Model architecture](Save/Stuff/Model.jpg)
 
+
 The model architecture is inspired by the Transformers architecture, consisting of two parts: an encoder and a decoder.
 
 ### [4.1]Encoder
 ![Encoder architecture](Save/Stuff/Encoder.jpg)
+
+The image above illustrates the overall architecture of the encoder block.
+Step 1: A batch of images is passed through the ImageEmbedding to extract feature data.
+
+Step 2: The features extracted in step 1 are then passed through one or more EncoderLayers to perform "self-attention".
+
+Finally, we will receive a tensor that will be passed to the decoder as an input.
 
 ![ImageEmbedding architecture](Save/Stuff/ImageEmbedding.jpg)
 
@@ -49,6 +57,14 @@ Finally, the output of the encoder is a tensor used as input for the decoder blo
 
 ### [4.2]Decoder
 ![Decoder archietecture](Save/Stuff/Decoder.jpg)
+
+
+Step 1: Pass the captions through the CaptionEmbedding block.
+
+Step 2: After embedding the captions, we combine them with the encoder output through one or more DecoderLayer blocks.
+
+Step 3 : Passed the output of step 2 to the classifier block. Finally we receive the result, and we passed the result as the input of decoder at the next timestep.
+
 
 ![CaptionEmbedding architecture](Save/Stuff/CaptionEmbedding.jpg)
 
