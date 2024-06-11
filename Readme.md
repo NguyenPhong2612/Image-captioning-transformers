@@ -40,6 +40,7 @@ The model architecture is inspired by the Transformers architecture, consisting 
 
 The ImageEmbedding block uses the EfficientNet model to extract data from images. Using EfficientNet reduces computational costs.The output of ImageEmbedding wil feed to EncoderLayer as input.
 
+
 ![EncoderLayer architecture](Save/Stuff/EncoderLayer.jpg)
 
 Each EncoderLayer integrates a MultiheadAttention network, Add&Norm, and FeedForward. The encoder consists of multiple stacked EncoderLayers, where the output of one layer becomes the input to the next.
@@ -53,6 +54,7 @@ Finally, the output of the encoder is a tensor used as input for the decoder blo
 
 The CaptionEmbeding block is tasked embedding the captions. 
 It not only embeds the words in the caption but also combines positional embeddings of the words in the caption to ensure that words further apart have smaller correlation.The output of CaptionEmbedding wil feed to DecoderLayer as input.
+
 
 ![DecoderLayer architecture](Save/Stuff/DecoderLayer.jpg)
 
